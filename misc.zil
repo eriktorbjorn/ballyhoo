@@ -667,7 +667,7 @@ and to bask in the thunder of applause." CR CR>
 	 <PUT <SET CINT <INT .RTN>> ,C-TICK .TICK>
 	 .CINT>
 
-<ROUTINE INT (RTN "OPTIONAL" E C INT)
+<ROUTINE INT (RTN "AUX" E C INT)
 	 <SET E <REST ,C-TABLE ,C-TABLELEN>>
 	 <SET C <REST ,C-TABLE ,C-INTS>>
 	 <REPEAT ()
