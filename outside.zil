@@ -193,7 +193,7 @@ doesn't advance the " D .LINE "." CR>
 	       (T
 		<RFALSE>)>>
 
-<ROUTINE GEN-LINE-F ("AUX" LINE)
+<ROUTINE GEN-LINE-F ()
 	 <COND (<AND <VERB? DISEMBARK EXIT>
 		     <EQUAL? <LOC ,PROTAGONIST> ,LONG ,SHORT>>
 		<LOC ,PROTAGONIST>)
@@ -764,7 +764,7 @@ the midget reaches up to its lowest rung and passes through ..." CR>)>
 	(GENERIC GEN-BAR)
 	(ACTION CHUTE-F)>
 
-<ROUTINE CHUTE-DESC ("OPTIONAL" X)
+<ROUTINE CHUTE-DESC ()
 	 <TELL 
 "About waist-high, a barred passage for wild animals extends several yards
 out from the " D ,BIGTOP>
@@ -2076,7 +2076,7 @@ a vertical spine.">
 	;(FLAGS NDESCBIT)
 	(ACTION TURNSTILE-F)>
 
-<ROUTINE PSEUDO-TURNSTILE-DESC ("OPTIONAL" X)
+<ROUTINE PSEUDO-TURNSTILE-DESC ()
 	 <TELL
 "Adjacent to the turnstile to your south is a vertical cage.">>
 
@@ -2468,7 +2468,7 @@ exclamation points and ... well, say things like ..." CR>
 	(GENERIC GEN-MOUSE-F)
 	(ACTION MOUSE-F)>
 
-<ROUTINE MOUSE-DESC ("OPTIONAL" X)
+<ROUTINE MOUSE-DESC ()
 	 <COND (<FSET? ,TRAP ,NDESCBIT>
 		<TELL 
 "Over in the " D ,CORNER ", a " D ,MOUSE " gnaws timidly at the " D ,TRAP ".">)
@@ -2729,7 +2729,7 @@ then dies." CR>)
 	(SIZE 50)
 	(ACTION TAFT-F)>
 
-<ROUTINE TAFT-DESC ("OPTIONAL" X)
+<ROUTINE TAFT-DESC ()
          <TELL "President William Howard Taft is here.">>
 
 ;"RMUNGBIT = character is now known as cardboard, not human"
@@ -2927,7 +2927,7 @@ of a tightrope apparatus!\"" CR>)>
 		     (<EQUAL? ,FOLLOW-FLAG 13>
 		      <DO-WALK ,P?EAST>)>)>>
 
-<ROUTINE MUNRAB-DESC ("OPTIONAL" X)	 
+<ROUTINE MUNRAB-DESC ()
 	 <COND (<AND <IN? ,NET ,MUNRAB>
 		     <EQUAL? ,HERE ,RING>>
 		;<ENABLE <QUEUE I-END-GAME 2>>
@@ -3136,7 +3136,7 @@ D ,COAT " and lays them on the " D ,SAWDUST "." CR>>
 <GLOBAL DICK-DRUNK <>> ;"says he's lying in midwest, not with billy" 
 <GLOBAL DICK-UNRESPONSIVE <>>
 
-<ROUTINE DICK-DESC ("OPTIONAL" X)
+<ROUTINE DICK-DESC ()
 	 <COND (,DICK-DRUNK
 		<TELL 
 "Over next to the " D ,BIGTOP ", you can see the rumpled form of the " 
@@ -4202,7 +4202,7 @@ him." CR>)>
 
 ;"NDESCBIT for when he's sleeping, desc in clown-alley-f"
 
-<ROUTINE THUMB-DESCFCN ("OPTIONAL" X)
+<ROUTINE THUMB-DESCFCN ()
 	 <COND (<AND <EQUAL? ,HERE ,CLOWN-ALLEY>
 		     <RUNNING? ,I-CLOWN-ALLEY>>
 		<TELL 
@@ -4322,7 +4322,7 @@ loses his grip and plops to the " D ,GROUND " before" >)
 
 ;"RMUNGBIT = asked guard about him"
 
-<ROUTINE JOEY-DESC ("OPTIONAL" X)
+<ROUTINE JOEY-DESC ()
 	 <COND (<RUNNING? ,I-CLOWN-ALLEY>
 		<TELL
 "Chuckles the clown is leaning in front of a mirror, removing his makeup.">)

@@ -508,7 +508,7 @@ object, LOOK INSIDE it, LOOK UNDER it, etc." CR>)>>
 	 <TELL <PICK-ONE ,YUKS> CR>
 	 <RTRUE>>
 
-<ROUTINE V-CLAP ("AUX" ACTOR)
+<ROUTINE V-CLAP ()
 	 <COND (,PRSO
 		<PERFORM ,V?RUB ,PRSO>
 		<RTRUE>)
@@ -1527,7 +1527,7 @@ broad panels of hazy light." CR>)
 	       (T
 		<TELL "You sound rather negative." CR>)>>
 	                    
-<ROUTINE V-OPEN ("AUX" F STR)
+<ROUTINE V-OPEN ()
 	 <COND (<FSET? ,PRSO ,SURFACEBIT>
 		<V-COUNT>)
 	       (<FSET? ,PRSO ,ACTORBIT>
@@ -2065,7 +2065,7 @@ interspersed with even more irritating snippets of talk and music." CR>)
 	 <PERFORM ,V?GIVE ,PRSI ,PRSO>
 	 <RTRUE>>
 
-<ROUTINE V-SHAKE ("AUX" X)
+<ROUTINE V-SHAKE ()
 	 <COND (<FSET? ,PRSO ,ACTORBIT>
 		<TELL "Be real." CR>)
 	       (T
@@ -2353,7 +2353,7 @@ interspersed with even more irritating snippets of talk and music." CR>)
 	       (T
 		<TELL <PICK-ONE ,YUKS> CR>)>>
 
-<ROUTINE V-THROUGH ("AUX" M)
+<ROUTINE V-THROUGH ()
 	<COND (<FSET? ,PRSO ,DOORBIT>
 	       <DO-WALK <OTHER-SIDE ,PRSO>>
 	       <RTRUE>)
@@ -2848,7 +2848,7 @@ before. All I can say is that I haven't seen the kid all evening.\"" CR>)
          
 ;"subtitle object manipulation"
 
-<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" ;CNT OBJ)
+<ROUTINE ITAKE ("OPTIONAL" (VB T))
 	 <COND (<NOT <FSET? ,PRSO ,TAKEBIT>>
 		<COND (.VB
 		       <V-INHALE>)>
@@ -3288,7 +3288,7 @@ here.\"" CR>)
 	<ROB ,X-OBJECT .THING>
 	<ROB ,DUMMY-OBJECT .THING>>
 
-<ROUTINE SEE-ANYTHING-IN? (THING "AUX" OBJ NXT (ANY? <>))
+<ROUTINE SEE-ANYTHING-IN? (THING "AUX" OBJ (ANY? <>))
 	 <SET OBJ <FIRST? .THING>>
 	 <REPEAT ()
 		 <COND (.OBJ

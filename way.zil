@@ -1513,7 +1513,7 @@ CR>)
 		     <EQUAL? ,FOLLOW-FLAG 14 5>>
 		<DO-WALK ,P?SOUTH>)>>
 		      
-<ROUTINE JIM-DESCFCN ("OPTIONAL" X)
+<ROUTINE JIM-DESCFCN ()
 	 <TELL "A " D ,JIM " stands nearby.">>
 
 <OBJECT JIM-GLOBAL           ;"for talking to thru phones" 
@@ -1799,7 +1799,7 @@ you shall obey my every command.\"" CR>
 	 ;<ENABLE <QUEUE I-RUN 2>>
 	 <TELL "You adjust the controls and ">>
 
-<ROUTINE I-RUN ("AUX" NUM)
+<ROUTINE I-RUN ()
 	 <COND (<EQUAL? ,KNOB-SET ,V?PLAY>
 		<SETG ON-TAPE <+ ,ON-TAPE 1>>)
 	       (<EQUAL? ,KNOB-SET ,V?ADVANCE>
@@ -2199,7 +2199,7 @@ moment, then offers, \"About">
 		       <TELL " it is impossible for me">)>
 		<TELL " to soothsay.\"" CR>)>>
                                                         
-<ROUTINE HYP-DESC ("OPTIONAL" X)
+<ROUTINE HYP-DESC ()
 	 <SETG P-IT-OBJECT ,HYP>
 	 <TELL  
 "Standing here, attired in an immaculate black tuxedo, is none other than
@@ -3100,7 +3100,7 @@ gloomy west side of the room, a " D ,STAIRCASE " leads upward." CR>)>>
 		     <EQUAL? ,FOLLOW-FLAG 6>>
 	        <DO-WALK ,P?NORTH>)>>
 
-<ROUTINE HERM-DESC ("OPTIONAL" X)
+<ROUTINE HERM-DESC ()
 	 <SET P-IT-OBJECT ,ANDREW>
 	 <TELL 
 "Andrew Jenny is the attraction of this sideshow. He appears standoffish,
@@ -3437,7 +3437,7 @@ with you and turns his attention back to the detective." CR>)
 		       (<EQUAL? ,FOLLOW-FLAG 15>
 		        <DO-WALK ,P?UP>)>)>>
 	
-<ROUTINE CON-DESC ("OPTIONAL" X)
+<ROUTINE CON-DESC ()
 	 <COND (<EQUAL? ,HERE ,MIDWEST>
 		<TELL
 "Next to the " D ,BIGTOP ", the " D ,DICK " is talking to a pitchman who's

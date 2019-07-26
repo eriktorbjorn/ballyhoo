@@ -866,7 +866,7 @@ clinging ever more tightly onto " D ,BACK "." CR>)
 	;(GENERIC SUCKER-F)
 	(ACTION ME-F)>
 
-<ROUTINE ME-F ("AUX" OLIT) 
+<ROUTINE ME-F ()
 	 <COND (<VERB? TELL>
 	        <TELL
 "Talking to yourself is a sign that it's getting late." CR>

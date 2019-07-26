@@ -907,7 +907,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 <CONSTANT P-SONUMS 3>
     
 <ROUTINE SYNTAX-CHECK
-	("AUX" SYN LEN NUM OBJ (DRIVE1 <>) (DRIVE2 <>) PREP VERB TMP)
+	("AUX" SYN LEN NUM OBJ (DRIVE1 <>) (DRIVE2 <>) PREP VERB)
 	<COND (<0? <SET VERB <GET ,P-ITBL ,P-VERB>>>
 	       <TELL "[There was no verb in that sentence!]" CR>
 	       <RFALSE>)>
@@ -1190,7 +1190,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 			    (T <SETG P-PRSI <BUT-MERGE ,P-PRSI>>)>)>)>
 	<RTRUE>>  
 
-<ROUTINE BUT-MERGE (TBL "AUX" LEN BUTLEN (CNT 1) (MATCHES 0) OBJ NTBL)
+<ROUTINE BUT-MERGE (TBL "AUX" LEN (CNT 1) (MATCHES 0) OBJ NTBL)
 	<SET LEN <GET .TBL ,P-MATCHLEN>>
 	<PUT ,P-MERGE ,P-MATCHLEN 0>
 	<REPEAT ()
@@ -1242,7 +1242,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 ;<GLOBAL P-CSPTR <>>
 ;<GLOBAL P-CEPTR <>>
 
-<ROUTINE SNARFEM (PTR EPTR TBL "AUX" (BUT <>) LEN WV WRD NW (WAS-ALL <>))
+<ROUTINE SNARFEM (PTR EPTR TBL "AUX" (BUT <>) WV WRD NW (WAS-ALL <>))
    <SETG P-AND <>>
    <COND (<==? ,P-GETFLAGS ,P-ALL>
 	  <SET WAS-ALL T>)>
@@ -1690,7 +1690,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 			   <EQUAL? ,PRSA ,V?LOOK-INSIDE ,V?SEARCH ,V?EXAMINE>>
 		      <DO-SL ,ROOMS 1 1>)>)>>
  
-<ROUTINE DO-SL (OBJ BIT1 BIT2 "AUX" BTS)
+<ROUTINE DO-SL (OBJ BIT1 BIT2)
 	<COND (<BTST ,P-SLOCBITS <+ .BIT1 .BIT2>>
 	       <SEARCH-LIST .OBJ ,P-TABLE ,P-SRCALL>)
 	      (T
